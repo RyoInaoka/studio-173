@@ -17,7 +17,11 @@ export default async function BlogPage({
   params,
 }: Props) {
   const { id } = await params;
-  const blog: Blog = await microCMSClient.get({ endpoint: "blogs", contentId: id })
+  const blog: Blog = await microCMSClient.get({ endpoint: "blogs", contentId: id });
+
+  if (!blog) {
+    return <p>記事が見つかりません</p>;
+  }
 
   return (
     <article className="py-24">
