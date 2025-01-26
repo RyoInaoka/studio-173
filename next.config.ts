@@ -10,7 +10,9 @@ if (process.env.NODE_ENV === 'development') {
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["images.microcms-assets.io"], // MicroCMSの画像を読み込むため
+  },
 };
 
 export default nextConfig;

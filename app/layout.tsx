@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description: "Studio173という屋号でWebサイト制作・業務委託のエンジニアとしてシステム開発を請け負っています。事業主は大阪を拠点とするWebエンジニア稲岡亮です。",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}) => {
   return (
     <html lang="ja">
       <body
@@ -25,3 +25,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
