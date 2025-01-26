@@ -6,7 +6,6 @@ import { Blog } from "./types/microcms";
 import { BlogCarousel } from "./components/projects/BlogCarousel";
 
 const Home = async () => {
-  console.log("API_KEY:", process.env.SERVICE_DOMAIN);
   const blogs: Blog[] = await microCMSClient
     .get({ endpoint: "blogs" })
     .then((res) => res.contents);
