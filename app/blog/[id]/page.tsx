@@ -10,12 +10,13 @@ const window = new JSDOM('').window;
 const purify = DOMPurify(window);
 
 export default async function BlogPage({
-  params: { id },
+  params,
 }: Readonly<{
   params: {
     id: string;
   };
 }>) {
+  const { id } = params;
   const blog: Blog = await microCMSClient.get({ endpoint: "blogs", contentId: id })
   const sanitizedContent = purify.sanitize(blog.content, {
     ALLOWED_TAGS: [
