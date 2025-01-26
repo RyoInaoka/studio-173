@@ -43,7 +43,7 @@ const Home = async () => {
           <ul className="mt-6 flex gap-8">
             <li className="flex items-center">
               <Image src="/github.svg" alt="GitHub" width={24} height={24} className="w-6" />
-              <a href="https://github.com/Studio173" className="ml-2 font-en hover:text-primary duration-300" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/RyoInaoka" className="ml-2 font-en hover:text-primary duration-300" target="_blank" rel="noopener noreferrer">GitHub</a>
             </li>
           </ul>
         </Inner>
