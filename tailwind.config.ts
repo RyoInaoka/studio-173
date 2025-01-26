@@ -34,6 +34,31 @@ export default {
           "sans-serif",
         ]
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'inherit',
+            a: {
+              color: '#2563eb',
+              '&:hover': {
+                color: '#1d4ed8',
+              },
+              textDecoration: 'none',
+            },
+            blockquote: {
+              borderLeftColor: '#e5e7eb',
+              fontStyle: 'italic',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+          },
+        },
+      },
     },
     screens: {
       sm: "640px",
@@ -43,5 +68,8 @@ export default {
       "2xl": "1536px",
     }
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require("@tailwindcss/typography"),
+  ],
 } satisfies Config;
