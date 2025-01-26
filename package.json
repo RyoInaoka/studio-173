@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
+    "dompurify": "^3.2.3",
+    "jsdom": "^26.0.0",
     "microcms-js-sdk": "^3.1.2",
     "next": "15.1.0",
     "react": "^19.0.0",
@@ -24,6 +26,8 @@
     "@cloudflare/next-on-pages": "^1.13.7",
     "@cloudflare/workers-types": "^4.20241224.0",
     "@eslint/eslintrc": "^3",
+    "@types/dompurify": "^3.0.5",
+    "@types/jsdom": "^21.1.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
