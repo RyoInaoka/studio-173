@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { tv } from "tailwind-variants"
 
 export const Header: React.FC = () => {
@@ -7,7 +8,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className={base()}>
-      <div className={title()}><Image src="/logo.svg" alt="Studio173" width={160} height={48} className={logo()} /></div>
+      <Link href="/" className={title()}><Image src="/logo.svg" alt="Studio173" width={160} height={48} className={logo()} /></Link>
       <nav className={links()}>
         <a href="#about" className="font-bold font-en px-2 text-lg sm:text-xl">About</a>
         <a href="#blog" className="font-bold font-en px-2 text-lg sm:text-xl">Blog</a>
