@@ -21,6 +21,7 @@
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "splide-nextjs": "^2.4.23",
     "tailwind-variants": "^0.3.1"
   },
   "devDependencies": {

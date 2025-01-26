@@ -20,9 +20,6 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@splidejs/react-splide": [
-        "./node_modules/@splidejs/react-splide/dist/types/index.d.ts"
-      ],
     },
     "types": [
         "@cloudflare/workers-types/2023-07-01"
