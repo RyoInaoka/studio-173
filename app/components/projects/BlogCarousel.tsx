@@ -1,11 +1,14 @@
 'use client'
 
 import Image from 'next/image';
-import { Splide, SplideSlide } from 'splide-nextjs/react-splide';
+import dynamic from 'next/dynamic';
+import type { Splide as SplideType, SplideSlide as SplideSlideType } from 'splide-nextjs/react-splide';
 import '@splidejs/react-splide/css';
 import { Blog } from '@/app/types/microcms';
 import { Card } from '../elements/Card';
 import { useMemo, useRef } from 'react';
+const Splide: typeof SplideType = dynamic(() => import('splide-nextjs/react-splide').then((mod) => mod.Splide), { ssr: false });
+const SplideSlide: typeof SplideSlideType = dynamic(() => import('splide-nextjs/react-splide').then((mod) => mod.SplideSlide), { ssr: false });
 
 type Props = {
   blogs: Blog[]
