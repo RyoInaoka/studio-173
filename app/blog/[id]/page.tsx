@@ -9,14 +9,17 @@ import { Inner } from "@/app/components/projects/Inner";
 const window = new JSDOM('').window;
 const purify = DOMPurify(window);
 
+type Props = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
+
 export default async function BlogPage({
   params,
-}: Readonly<{
-  params: {
-    id: string;
-  };
-}>) {
-  const { id } = params;
+}: Props) {
+  const { id } = await params;
   const blog: Blog = await microCMSClient.get({ endpoint: "blogs", contentId: id })
   const sanitizedContent = purify.sanitize(blog.content, {
     ALLOWED_TAGS: [
