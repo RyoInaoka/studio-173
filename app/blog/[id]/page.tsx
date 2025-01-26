@@ -1,4 +1,4 @@
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 import Image from "next/image";
 import { Blog } from "@/app/types/microcms";
