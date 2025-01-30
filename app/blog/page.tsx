@@ -21,7 +21,7 @@ const BlogArchive = async () => {
                 title={blog.title}
                 category={blog.category.name}
                 link={`/blog/${blog.id}`}
-                publishedAt={new Date(blog.publishedAt).toLocaleDateString()}
+                publishedAt={new Date(blog.publishedAt).toLocaleDateString('ja-JP', { day: 'numeric', month: 'short', year: 'numeric' })}
               />
             </div>
           ))}
