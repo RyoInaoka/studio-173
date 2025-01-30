@@ -20,7 +20,7 @@ export const RippleMain: React.FC = () => {
 
 
   return (
-    <div className="absolute z-[-1] right-0 w-[400px] h-[400px]">
+    <div className="absolute z-[-1] right-0 bottom-[-5vh] lg:bottom-auto w-[70vw] h-[70vw] lg:w-[400px] lg:h-[400px]">
       <style jsx global>{`
         @keyframes drawPath {
           to {
