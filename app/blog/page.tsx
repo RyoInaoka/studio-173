@@ -4,7 +4,7 @@ import { Inner } from '@/app/components/projects/Inner';
 import { microCMSClient } from "@/app/libs/client";
 
 
-export const BlogPage: React.FC = async () => {
+const BlogArchive = async () => {
   const blogs: Blog[] = await microCMSClient
     .get({ endpoint: "blogs" })
     .then((res) => res.contents);
@@ -31,4 +31,4 @@ export const BlogPage: React.FC = async () => {
   );
 }
 
-export default BlogPage;
+export default BlogArchive;
