@@ -1,3 +1,3 @@
-export const Inner = ({ children, className }: { children: React.ReactNode, className?: string }) => {
-  return <div className={`relative block max-w-inner w-inner mx-auto h-full ${className || ''}`}>{children}</div>;
+export const Inner = ({ children, className, isNarrow }: { children: React.ReactNode, className?: string, isNarrow?: boolean }) => {
+  return <div className={`relative block max-w-inner mx-auto h-full ${className || ''} ${isNarrow ? 'w-[750px]' : 'w-inner'}`}>{children}</div>;
 };
