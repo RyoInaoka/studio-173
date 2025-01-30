@@ -25,13 +25,13 @@ export default async function BlogPage({
 
   return (
     <article className="py-24">
-      <Inner>
-        <h1 className="text-3xl font-bold my-4">{blog.title}</h1>
+      <Inner isNarrow>
+        <h1 className="text-2xl sm:text-3xl text-primary font-bold my-8">{blog.title}</h1>
         {blog.category && <p className="text-sm text-primary">{blog.category.name}</p>}
         <p className="text-sm">{new Date(blog.publishedAt).toLocaleDateString()}</p>
         {blog.eyecatch && <Image className="py-4" src={blog.eyecatch.url || '/noimage.jpg'} alt={blog.title} width={blog.eyecatch.width || 450} height={blog.eyecatch.height || 300} />}
         <div
-          className="my-10 prose lg:prose-md"
+          className="my-10 prose prose-sm sm:prose-base"
           dangerouslySetInnerHTML={{
             __html: blog.content,
           }}
