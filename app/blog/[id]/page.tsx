@@ -28,7 +28,7 @@ export default async function BlogPage({
       <Inner isNarrow>
         <h1 className="text-2xl sm:text-3xl text-primary font-bold my-8">{blog.title}</h1>
         {blog.category && <p className="text-sm text-primary">{blog.category.name}</p>}
-        <p className="text-sm">{new Date(blog.publishedAt).toLocaleDateString()}</p>
+        <p className="text-sm">{new Date(blog.publishedAt).toLocaleDateString('ja-JP', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
         {blog.eyecatch && <Image className="py-4" src={blog.eyecatch.url || '/noimage.jpg'} alt={blog.title} width={blog.eyecatch.width || 450} height={blog.eyecatch.height || 300} />}
         <div
           className="my-10 prose prose-sm sm:prose-base"
