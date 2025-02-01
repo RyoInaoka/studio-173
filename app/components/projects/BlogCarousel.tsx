@@ -14,8 +14,7 @@ type Props = {
   blogs: Blog[]
 }
 export const BlogCarousel: React.FC<Props> = ({ blogs }: Props) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const splideRef = useRef<any>(null);
+  const splideRef = useRef<typeof SplideType | null>(null);
   const showArrows: boolean = useMemo(() => {
     return blogs.length > 2;
   },[blogs.length]);
