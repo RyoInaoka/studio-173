@@ -38,7 +38,7 @@ export const Card: React.FC<Props> = ({ ...props }) => {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="p-6">
+        <div className="p-6 bg-gray-50">
           <h3 className="text-sm font-medium text-blue-600 mb-2">
             {props.category}
           </h3>

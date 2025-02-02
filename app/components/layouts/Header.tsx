@@ -10,8 +10,8 @@ export const Header: React.FC = () => {
     <header className={base()}>
       <Link href="/" className={title()}><Image src="/logo.svg" alt="Studio173" width={160} height={48} className={logo()} /></Link>
       <nav className={links()}>
-        <a href="#about" className="font-bold font-en px-2 text-lg sm:text-xl">About</a>
-        <a href="#blog" className="font-bold font-en px-2 text-lg sm:text-xl">Blog</a>
+        <Link href="/#about" className="font-bold font-en px-2 text-lg sm:text-xl">About</Link>
+        <Link href="/blog" className="font-bold font-en px-2 text-lg sm:text-xl">Blog</Link>
       </nav>
     </header>
   )
