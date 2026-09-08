@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import Image from "next/image";
 import { Blog } from "@/app/types/microcms";
 import { microCMSClient } from "../../libs/client";
@@ -12,6 +10,14 @@ type Props = {
   }>;
 };
 
+export async function generateStaticParams() {
+  const blogs = await microCMSClient.getAllContents<Pick<Blog, "id">>({
+    endpoint: "blogs",
+    queries: { fields: "id" },
+  });
+
+  return blogs.map((blog) => ({ id: blog.id }));
+}
 
 export default async function BlogPage({
   params,
