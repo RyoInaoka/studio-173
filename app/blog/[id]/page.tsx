@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import Image from "next/image";
 import { Blog } from "@/app/types/microcms";
 import { microCMSClient } from "../../libs/client";

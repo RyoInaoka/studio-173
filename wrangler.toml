@@ -1,8 +1,16 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "studio-173"
-compatibility_date = "2024-12-24"
-compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
+main = ".open-next/worker.js"
+compatibility_date = "2026-09-08"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "studio-173"
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Pages Function, running it closer to your back-end infrastructure
