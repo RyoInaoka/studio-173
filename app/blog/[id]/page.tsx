@@ -10,6 +10,14 @@ type Props = {
   }>;
 };
 
+export async function generateStaticParams() {
+  const blogs = await microCMSClient.getAllContents<Pick<Blog, "id">>({
+    endpoint: "blogs",
+    queries: { fields: "id" },
+  });
+
+  return blogs.map((blog) => ({ id: blog.id }));
+}
 
 export default async function BlogPage({
   params,
